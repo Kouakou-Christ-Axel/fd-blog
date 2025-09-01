@@ -6,4 +6,5 @@ export interface IFlash {
 	updated_at: string;
 	deleted_at: string | null;
 	created_by: number;
+	link:string;
 }

@@ -5,12 +5,6 @@ import {AnimatePresence, motion} from "framer-motion";
 import {cn} from "@/lib/utils";
 import {useFlashStore} from "@/features/infos-flash/flash.store";
 
-const flashInfos = [
-	{id: 1, text: "New features added to the platform! Check them out."},
-	{id: 2, text: "Scheduled maintenance on Sunday."},
-	{id: 3, text: "Check out our latest blog post!"}
-]
-
 function FlashInfo() {
 	const {getActiveFlashInfos} = useFlashStore();
 	const activeFlashInfos = getActiveFlashInfos();
