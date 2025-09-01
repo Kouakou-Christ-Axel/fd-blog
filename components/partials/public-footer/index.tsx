@@ -1,5 +1,6 @@
 import Image from "next/image";
 import LogoFd from "@/components/logo-fd";
+import Link from "next/link";
 
 export default function PublicFooter() {
 	return (
@@ -18,11 +19,12 @@ export default function PublicFooter() {
 
 					<div className="text-center">
 						<h6 className="text-3xl">
-							Projet de modernisation de la presse: jusqu&#39;a ces acteurs ?
+							Projet de modernisation de la presse: une stratégie de transformation digitale
+							pour tout ces acteurs.
 						</h6>
 						<p className="text-center mx-auto text-gray-300 mt-4">
 							Idée originale, conçue et développée par {" "}
-							<strong className="font-semibold">LUNION-LAB</strong>.
+							<Link href="https://www.lunion-lab.com/" className="font-semibold">LUNION-LAB</Link>.
 						</p>
 					</div>
 					<Image
