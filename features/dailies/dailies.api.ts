@@ -8,13 +8,9 @@ export interface IDailyAPI {
 
 export const dailyAPI: IDailyAPI = {
 	obtenirTousDailies(): Promise<PaginatedResponse<IDaily>> {
-		const data = api.request<PaginatedResponse<IDaily>>({
+		return api.request<PaginatedResponse<IDaily>>({
 			endpoint: `/dailies`,
 			method: "GET",
 		})
-
-		console.log(data)
-
-		return data;
 	},
 };

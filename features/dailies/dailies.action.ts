@@ -8,7 +8,6 @@ import {dailyAPI} from "@/features/dailies/dailies.api";
 export const obtenirTousDailiesAction = async (): Promise<ActionResponse<PaginatedResponse<IDaily>>> => {
 	try {
 		const data = await dailyAPI.obtenirTousDailies();
-		console.log(data)
 		return {
 			success: true,
 			data: data,
