@@ -21,6 +21,7 @@ function Publicite({bannerPosition, ...props}: React.HTMLAttributes<HTMLDivEleme
 		return (
 			<Link href={banner.link} className={cn("items-center justify-center", props.className)} target="_blank" rel="noopener noreferrer">
 				<Image
+					className="rounded"
 					src={addDomainToBackendImagePath(banner.image_path)}
 					alt={banner.position || "Publicité"}
 					width={orientation == 'horizontal' ? 1232 : 400}

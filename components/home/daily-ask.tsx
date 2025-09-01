@@ -1,20 +1,15 @@
+"use client";
 import React from 'react';
 import SectionTitle from "@/components/section-title";
 import Image from "next/image";
-import {
-	Dialog,
-	DialogContent,
-	DialogDescription,
-	DialogHeader,
-	DialogTitle,
-	DialogTrigger
-} from "@/components/ui/dialog";
-import {Button} from "@/components/ui/button";
-import {Textarea} from "@/components/ui/textarea";
-import {Label} from "@/components/ui/label";
-import {Input} from "@/components/ui/input";
+import {useQuestionStore} from "@/features/question/question.store";
+import ResponseDialog from "@/features/question/components/response-dialog";
 
 function DailyAsk() {
+	const {getLatestQuestion} = useQuestionStore();
+
+	const question = getLatestQuestion();
+
 	return (
 		<section className="py-8">
 			<SectionTitle text="Question du jour" className="mb-6"/>
@@ -27,66 +22,12 @@ function DailyAsk() {
 				<article className="flex flex-col flex-1">
 					<div className="p-6">
 						<h3 className="text-lg font-semibold text-gray-800 mb-2">
-							Quelle est votre opinion sur les dernières nouvelles politiques ?
+							{question ? question.body : "Aucune question disponible pour le moment."}
 						</h3>
 						<p className="text-gray-600 mb-4">
-							Partagez vos réflexions et engagez-vous dans la discussion.
+							{question ? `Partagez vos réflexions et engagez-vous dans la discussion.` : "Veuillez revenir plus tard pour une nouvelle question."}
 						</p>
-						<Dialog>
-							<form>
-								<DialogTrigger asChild>
-									<Button
-										type={"button"}
-										className="bg-[#FF8D28] text-white px-4 py-2 rounded-lg hover:bg-[#e07b22] transition-colors"
-									>
-										Répondre
-									</Button>
-								</DialogTrigger>
-								<DialogContent>
-									<DialogHeader>
-										<DialogTitle>
-											Répondre à la question du jour
-										</DialogTitle>
-										<DialogDescription>
-											Vous pouvez partager vos pensées et opinions ici.
-										</DialogDescription>
-										<DialogContent className="text-sm">
-											<div className="grid grid-cols-1 md:grid-cols-2 gap-2">
-												<div>
-													<Label htmlFor="fullname">
-														Nom complet
-													</Label>
-													<Input
-														id="fullname"
-														type="text"
-														placeholder="Votre nom"
-													/>
-												</div>
-												<div>
-													<Label htmlFor="email">
-														Email
-													</Label>
-													<Input
-														id="email"
-														type="email"
-														placeholder="Votre email"
-													/>
-												</div>
-											</div>
-
-											<Label htmlFor="response">
-												Votre réponse
-											</Label>
-											<Textarea
-												id="response"
-												className="w-full h-32"
-												placeholder="Dites nous tout."
-											/>
-										</DialogContent>
-									</DialogHeader>
-								</DialogContent>
-							</form>
-						</Dialog>
+						{question && <ResponseDialog questionId={question.id} />}
 					</div>
 				</article>
 			</div>

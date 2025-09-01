@@ -1,6 +1,6 @@
 "use client";
 
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import {AnimatePresence, motion} from "framer-motion";
 import {cn} from "@/lib/utils";
 import {useFlashStore} from "@/features/infos-flash/flash.store";
@@ -9,8 +9,6 @@ function FlashInfo() {
 	const {getActiveFlashInfos} = useFlashStore();
 	const activeFlashInfos = getActiveFlashInfos();
 	const [activeInfoIndex, setActiveInfoIndex] = React.useState(0);
-
-	console.log("Active Flash Infos:", activeFlashInfos);
 
 	const activeInfo = activeFlashInfos[activeInfoIndex] || {id: 0, title: "", body: ""};
 

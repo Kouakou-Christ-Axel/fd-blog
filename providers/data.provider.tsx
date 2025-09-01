@@ -9,6 +9,8 @@ import {useBannerListQuery} from "@/features/banner/queries/banner-list";
 import {useBannerStore} from "@/features/banner/banner.store";
 import {useFlashStore} from "@/features/infos-flash/flash.store";
 import {useExclusivityListQuery} from "@/features/infos-flash/queries/flash-list";
+import {useQuestionListQuery} from "@/features/question/queries/question-list";
+import {useQuestionStore} from "@/features/question/question.store";
 
 export default function DataProvider() {
 	const {data, isLoading, isError, error, isFetching} = useArticleListQuery({})
@@ -34,7 +36,15 @@ export default function DataProvider() {
 		isError: exclusivitiesIsError,
 		error: exclusivitiesError,
 		isFetching: exclusivitiesIsFetching
-	} = useExclusivityListQuery()
+	} = useExclusivityListQuery();
+
+	const {
+		data: questionsData,
+		isLoading: questionsLoading,
+		isError: questionsIsError,
+		error: questionsError,
+		isFetching: questionsIsFetching
+	} = useQuestionListQuery();
 
 	// Mémorisation des listes pour éviter les recalculs inutiles
 	const articlesList = React.useMemo(() => data?.data || [], [data]);
@@ -48,10 +58,9 @@ export default function DataProvider() {
 	const {setAllArticles, setQueryState} = useArticleStore();
 	const {setAllDailies, setQueryState: setDailyQueryState} = useDailyStore();
 	const {setAllBanners, setQueryState: setBannerQueryState} = useBannerStore();
-	const {
-		setAllFlashInfos,
-		setQueryState: setFlashQueryState
-	} = useFlashStore();
+	const {setAllFlashInfos, setQueryState: setFlashQueryState} = useFlashStore();
+	const {setAllQuestions, setQueryState:setQuestionsQueryState} = useQuestionStore();
+
 
 	// Effets pour mettre à jour les états
 	useEffect(() => {
@@ -60,6 +69,30 @@ export default function DataProvider() {
 			setAllArticles(data.data);
 		}
 	}, [isLoading, isError, error, isFetching, setQueryState, data, setAllArticles]);
+
+	useEffect(() => {
+		if (questionsData?.data?.length) {
+			setAllQuestions(questionsData.data);
+		} else {
+			setAllQuestions([]);
+		}
+		setQueryState({
+			isLoading: questionsLoading,
+			isError: questionsIsError,
+			error: questionsError,
+			isFetching: questionsIsFetching
+		});
+		// Nettoyage lors du démontage du composant
+		return () => {
+			setAllQuestions([]);
+			setQuestionsQueryState({
+				isLoading: false,
+				isError: false,
+				error: null,
+				isFetching: false
+			});
+		}
+	}, [questionsData, questionsError, questionsIsError, questionsIsFetching, questionsLoading, setAllQuestions, setQueryState]);
 
 	useEffect(() => {
 		setBannerQueryState({

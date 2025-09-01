@@ -14,8 +14,6 @@ function OtherDailyNews() {
 
 	const {isLoading, isError, error, isFetching, allArticles: articles, getFilteredArticles} = useArticleStore();
 
-	console.log(articles)
-
 	const showLoading = isLoading || isFetching;
 
 	if (isError) {
