@@ -16,7 +16,7 @@ export default async function HomePage(props: {
 		<>
 			<FlashInfo/>
 			<div className="page-container">
-				<Publicite className="h-40 mt-8 mb-10"/>
+				<Publicite className="h-40 mt-8 mb-10" bannerPosition="HEADER"/>
 				{/*<LatestNews/>*/}
 				<DailiesSliderSection/>
 				<OtherDailyNews/>

@@ -60,7 +60,7 @@ function ArticleDetails({slug}: { slug: string }) {
 				) : (
 					<p>Article non trouvé.</p>
 				)}
-				<Publicite/>
+				<Publicite bannerPosition="SIDEBAR_RIGHT"/>
 			</section>
 		</article>
 	);

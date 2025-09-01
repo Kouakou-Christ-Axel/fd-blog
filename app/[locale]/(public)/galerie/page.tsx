@@ -22,7 +22,7 @@ function VideosPage() {
 					description="Nous travaillons actuellement à la mise en place de cette section. Revenez bientôt pour découvrir nos
 				émissions vidéo passionnantes !"
 				/>
-				<Publicite className="w-full max-h-36 mt-14"/>
+				<Publicite className="w-full max-h-36 mt-14" bannerPosition="FOOTER"/>
 			</section>
 		</div>
 	);

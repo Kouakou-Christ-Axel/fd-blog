@@ -40,8 +40,8 @@ function ActualiteNationaleSupplementaire({category}: { category: string }) {
 				))}
 			</div>
 			<div className="grid grid-rows-2 gap-8">
-				<Publicite/>
-				<Publicite/>
+				<Publicite bannerPosition="SIDEBAR_RIGHT"/>
+				<Publicite bannerPosition="SIDEBAR_RIGHT"/>
 			</div>
 		</section>
 	);
