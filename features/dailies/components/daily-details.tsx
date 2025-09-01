@@ -1,5 +1,5 @@
 "use client";
-import React from 'react';
+import React, { useEffect, useState } from 'react'; // Import useState and useEffect
 import {useDailyStore} from "@/features/dailies/store/dailiesStore";
 import SectionTitle from "@/components/section-title";
 import {IDailyContent} from "@/features/dailies/types";
@@ -19,24 +19,28 @@ const colors = [
 ];
 
 function DailyDetails({dailyId}: { dailyId: string }) {
-	const {getDailyById, isLoading, isFetching} = useDailyStore()
+	const {getDailyById, isLoading, isFetching} = useDailyStore();
 
-	// Filtrage par date si une date est sélectionnée
 	const daily = getDailyById(dailyId);
-	const [selectedDate, setSelectedDate] = React.useState<string | null>(null);
+	const [selectedDate, setSelectedDate] = useState<string | null>(null); // Use useState directly
 
-	if (!daily) {
-		return <div className="mb-10">
-			<p className="text-center text-gray-500">Aucun daily disponible.</p>
-		</div>;
-	}
+	// Use useEffect to update state after render, avoiding an infinite loop
+	useEffect(() => {
+		if (daily && daily.published_at) {
+			setSelectedDate(new Date(daily.published_at).toISOString().split('T')[0]);
+		}
+	}, [daily]); // The effect runs only when the 'daily' object changes
 
-	setSelectedDate(new Date(daily.published_at).toISOString().split('T')[0])
-
-
-	// Affichage de l'indicateur de chargement si les données sont en cours de chargement
 	if (isLoading || isFetching) {
 		return <LoadingIndicator/>;
+	}
+
+	if (!daily) {
+		return (
+			<div className="mb-10">
+				<p className="text-center text-gray-500">Aucun daily disponible.</p>
+			</div>
+		);
 	}
 
 	return (
@@ -65,7 +69,7 @@ function DailyDetails({dailyId}: { dailyId: string }) {
 								</Badge>
 								<div dangerouslySetInnerHTML={{__html: content.body}}></div>
 							</div>
-						)
+						);
 					})}
 				</div>
 			</div>
