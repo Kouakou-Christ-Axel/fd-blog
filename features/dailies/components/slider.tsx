@@ -33,8 +33,8 @@ function Slider({images, className, ...props}: CarouselProps) {
 					</CarouselItem>
 				))}
 			</CarouselContent>
-			<CarouselPrevious />
-			<CarouselNext />
+			<CarouselPrevious className="max-md:hidden text-gray-950" />
+			<CarouselNext className="max-md:hidden text-gray-950" />
 		</Carousel>
 	);
 }

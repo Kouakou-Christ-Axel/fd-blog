@@ -20,7 +20,7 @@ function PodcastsPage() {
                     <EmissionCard key={emission.id} emission={emission}/>
                 ))}
             </div>
-            <Publicite className="w-full mt-12 max-h-40" bannerPosition="FOOTER"/>
+            <Publicite className="w-full mt-12" bannerPosition="FOOTER"/>
         </div>
     );
 }

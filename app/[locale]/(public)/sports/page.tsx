@@ -14,7 +14,7 @@ function ALaUnePage() {
 				<PageTitle
 					title="Sports"
 				/>
-				<div className="grid grid-cols-3 gap-4 mt-8">
+				<div className="grid-article-screen">
 					{articles.map((article) => (
 						<NewsCard news={article} key={"article-" + article.id}/>
 					))}

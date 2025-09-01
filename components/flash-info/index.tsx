@@ -18,7 +18,7 @@ function FlashInfo() {
 
 	console.log("Active Flash Infos:", activeFlashInfos);
 
-	const activeInfo = activeFlashInfos[activeInfoIndex] || {id: 0,title:"" ,body: ""};
+	const activeInfo = activeFlashInfos[activeInfoIndex] || {id: 0, title: "", body: ""};
 
 	const flashInfoVariants = {
 		initial: {opacity: 0, y: -20},
@@ -44,8 +44,9 @@ function FlashInfo() {
 			<div className="mx-auto w-full max-w-7xl px-2 sm:px-4 lg:px-6">
 				<div className="flex flex-col sm:flex-row items-center justify-between gap-1 sm:gap-3">
 					<div className="flex items-center self-start sm:self-auto">
-						<h2 className="uppercase font-extrabold text-base sm:text-lg md:text-xl lg:text-2xl w-max pr-3">Flash
-							Infos</h2>
+						<h2 className="uppercase font-extrabold text-base sm:text-lg md:text-xl lg:text-2xl w-max pr-3">
+							Flash Infos
+						</h2>
 						<div className="h-6 sm:h-8 md:h-10 lg:h-12 w-0.5 sm:w-1 bg-white"
 						     aria-label="Flash Info Indicator"/>
 					</div>
@@ -55,9 +56,12 @@ function FlashInfo() {
 						<div
 							className="ml-1 sm:ml-2 md:ml-3 text-xs sm:text-sm md:text-base lg:text-lg relative h-6 sm:h-7 overflow-hidden w-full">
 							<AnimatePresence>
-								<motion.p
+								<motion.a
+									href={activeInfo.link || "#"}
+									target="_blank"
+									rel="noopener noreferrer"
 									key={activeInfo.id}
-									className="absolute left-0 top-0 w-full text-ellipsis overflow-hidden truncate flex items-center"
+									className="absolute left-0 top-0 w-full text-ellipsis overflow-hidden truncate flex items-center truncate"
 									variants={flashInfoVariants}
 									initial="initial"
 									animate="animate"
@@ -66,7 +70,7 @@ function FlashInfo() {
 								>
 									<span className="uppercase mr-1">{activeInfo.title}:</span>
 									{activeInfo.body}
-								</motion.p>
+								</motion.a>
 							</AnimatePresence>
 						</div>
 					</div>

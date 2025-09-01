@@ -47,7 +47,7 @@ function StayConnected({className = ''}: { className?: string }) {
                         />
                     </li>
                 ))}
-                <Publicite className="" bannerPosition="SIDEBAR_RIGHT"/>
+                <Publicite className="block" bannerPosition="SIDEBAR_RIGHT"/>
             </ul>
         </aside>
     );
