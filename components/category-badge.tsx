@@ -1,13 +1,15 @@
 import React from 'react';
 import {Badge} from "@/components/ui/badge";
 import {cn} from "@/lib/utils";
-import {ICategory} from "@/app/api/news";
+import {ICategory} from "@/features/articles/types/article.type";
+import {getCategoryColor} from "@/features/articles/utils/category-colors";
+// import {ICategory} from "@/app/api/news";
 
 function CategoryBadge({category, className}: { category: ICategory, className: string }) {
     return (
         <Badge className={cn(
             "first-letter:capitalize text-white rounded-2xl p-2 text-xs",
-            category.color,
+            getCategoryColor(category.name),
             className
         )}>
             {category.name}

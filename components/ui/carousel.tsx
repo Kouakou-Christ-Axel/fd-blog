@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import useEmblaCarousel, {type UseEmblaCarouselType,} from "embla-carousel-react"
-import {CircleArrowLeft, CircleArrowRight} from "lucide-react"
+import {ChevronLeft, ChevronRight, CircleArrowLeft, CircleArrowRight} from "lucide-react"
 
 import {cn} from "@/lib/utils"
 import {Button} from "@/components/ui/button"
@@ -204,7 +204,7 @@ const CarouselPrevious = React.forwardRef<
             variant={variant}
             size={size}
             className={cn(
-                "absolute p-1 rounded-full bg-white/60",
+                "absolute p-1 rounded-full bg-white/50 text-white",
                 orientation === "horizontal"
                     ? "left-4 top-1/2 -translate-y-1/2"
                     : "top-4 left-1/2 -translate-x-1/2 rotate-90",
@@ -214,7 +214,7 @@ const CarouselPrevious = React.forwardRef<
             onClick={scrollPrev}
             {...props}
         >
-            <CircleArrowLeft className="!size-6"/>
+            <ChevronLeft className="!size-8"/>
             <span className="sr-only">Previous slide</span>
         </Button>
     )
@@ -233,7 +233,7 @@ const CarouselNext = React.forwardRef<
             variant={variant}
             size={size}
             className={cn(
-                "absolute p-1 rounded-full bg-white/60",
+                "absolute p-1 rounded-full bg-white/50 text-white",
                 orientation === "horizontal"
                     ? "right-4 top-1/2 -translate-y-1/2"
                     : "bottom-4 left-1/2 -translate-x-1/2 rotate-90",
@@ -243,7 +243,7 @@ const CarouselNext = React.forwardRef<
             onClick={scrollNext}
             {...props}
         >
-            <CircleArrowRight className="!size-6"/>
+            <ChevronRight className="!size-8"/>
             <span className="sr-only">Next slide</span>
         </Button>
     )

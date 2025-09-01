@@ -18,6 +18,7 @@ import { NuqsAdapter } from "nuqs/adapters/next/app";
 import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
 import getQueryClient from "@/lib/get-query-client";
 import { siteConfig } from "@/config/site";
+import DataProvider from "@/providers/data.provider";
 
 export const metadata: Metadata = {
   title: siteConfig.name,
@@ -54,6 +55,7 @@ export default async function RootLayout(
                   <ThemeProvider attribute="class" defaultTheme="light">
                     <MountedProvider>
                       <DirectionProvider direction={direction}>
+                        <DataProvider/>
                         {children}
                       </DirectionProvider>
                     </MountedProvider>

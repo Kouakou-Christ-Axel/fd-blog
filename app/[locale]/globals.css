@@ -83,6 +83,10 @@
     }
 }
 
+.text-primary-gradient {
+    @apply bg-custom-gradient text-transparent bg-clip-text
+}
+
 .page-container {
     @apply flex flex-col min-h-screen mx-auto max-w-7xl px-4 lg:px-6 w-full;
 }

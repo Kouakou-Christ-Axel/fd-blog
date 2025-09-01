@@ -6,7 +6,7 @@ import {cn} from "@/lib/utils";
 export interface IMedia {
     title: string;
     url: string;
-    publishedAt: string;
+    createdAt: string;
 }
 
 export type MediaCardProps = {
@@ -40,7 +40,7 @@ function ArticleCard({media, children, highlighted,important ,orientation = 'ver
                         {media.title}
                     </h4>
                     <time className="text-[#595959]">
-                        {dateFormat(media.publishedAt)}
+                        {dateFormat(media.createdAt)}
                     </time>
                 </div>
             </article>
