@@ -3,20 +3,21 @@ import React from 'react';
 import {useArticleStore} from "@/features/articles/stores/article.store";
 import NewsCard from "@/components/news/news-card";
 import PageTitle from "@/components/blocks/page-title";
+
 function ALaUnePage() {
 	const {allArticles} = useArticleStore();
 
 	return (
-			<div className="page-container">
-				<PageTitle
-					title="À la une"
-				/>
-				<div className="grid grid-cols-3 gap-4 mt-8">
-					{allArticles.map((article) => (
-						<NewsCard news={article} key={"article-" + article.id}/>
-					))}
-				</div>
+		<div className="page-container">
+			<PageTitle
+				title="À la une"
+			/>
+			<div className="grid grid-cols-3 gap-4 mt-8">
+				{allArticles.map((article) => (
+					<NewsCard news={article} key={"article-" + article.id}/>
+				))}
 			</div>
+		</div>
 	);
 }
 

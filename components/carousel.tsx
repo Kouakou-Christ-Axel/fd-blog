@@ -15,8 +15,8 @@ import {cn} from "@/lib/utils";
 import Image from "next/image";
 import Autoplay from "embla-carousel-autoplay";
 import CategoryBadge from "@/components/category-badge";
+import {AnimatePresence, motion} from "framer-motion";
 import {ICategory} from "@/app/api/news";
-import {motion, AnimatePresence} from "framer-motion";
 
 type CarouselWithPaginationProps = {
     caourselItems?: {
