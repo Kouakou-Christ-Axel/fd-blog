@@ -16,6 +16,7 @@ import {Form, FormControl, FormDescription, FormField, FormItem, FormLabel, Form
 import {zodResolver} from "@hookform/resolvers/zod";
 import {questionApi} from "@/features/question/question.api";
 import {toast} from "sonner";
+import {z} from "zod";
 
 function ResponseDialog({questionId}: { questionId: string }) {
 
@@ -23,8 +24,6 @@ function ResponseDialog({questionId}: { questionId: string }) {
 		resolver: zodResolver(reponseQuestionAddSchema),
 		defaultValues: {
 			contenu: '',
-			nom: '',
-			email: '',
 		}
 	})
 
@@ -74,6 +73,7 @@ function ResponseDialog({questionId}: { questionId: string }) {
 										<Textarea
 											placeholder="Écrivez votre réponse ici..."
 											className="min-h-[120px]"
+											maxLength={1000}
 											{...field}
 										/>
 									</FormControl>
