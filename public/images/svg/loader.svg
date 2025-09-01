@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; background: trannsparent; display: block; shape-rendering: auto;"  viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+<svg xmlns="http://www.w3.org/2000/svg"
+     style="margin: auto; background: trannsparent; display: block; shape-rendering: auto;" viewBox="0 0 100 100"
+     preserveAspectRatio="xMidYMid">
 <g transform="translate(50 50)">
   <g transform="scale(0.32)">
     <g transform="translate(-50 -50)">

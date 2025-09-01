@@ -2,6 +2,12 @@ export interface IDailyContent {
 	id: string;
 	body: string;
 	hashtag_id: string;
+	hashtag: {
+		id: string;
+		hashtag: string;
+		created_at: string;
+		updated_at: string;
+	};
 	path_image: string;
 	created_at: string;
 	updated_at: string;

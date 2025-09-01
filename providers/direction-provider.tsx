@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import { DirectionProvider as RadixDirProvider } from '@radix-ui/react-direction';
-import { useConfig } from '@/hooks/use-config';
+import {DirectionProvider as RadixDirProvider} from '@radix-ui/react-direction';
+import {useConfig} from '@/hooks/use-config';
 
 const DirectionProvider = ({ direction, children }: { direction: any, children: React.ReactNode }) => {
     const [config, setConfig] = useConfig();

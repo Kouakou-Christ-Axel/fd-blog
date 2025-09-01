@@ -1,6 +1,6 @@
-import { LoginDTO } from "../schemas/auth.schema";
-import { ILoginResponse, IRefreshTokenResponse } from "../types/auth.type";
-import { api } from "@/lib/api";
+import {LoginDTO} from "../schemas/auth.schema";
+import {ILoginResponse, IRefreshTokenResponse} from "../types/auth.type";
+import {api} from "@/lib/api";
 
 export interface IAuthAPI {
   login: (data: LoginDTO) => Promise<ILoginResponse>;

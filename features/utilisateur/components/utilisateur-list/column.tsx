@@ -1,23 +1,14 @@
-import { ColumnDef } from "@tanstack/react-table";
-import { Lock, LockOpen, SquarePen, Trash2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
+import {ColumnDef} from "@tanstack/react-table";
+import {Lock, LockOpen, SquarePen, Trash2} from "lucide-react";
+import {Button} from "@/components/ui/button";
+import {Avatar, AvatarFallback} from "@/components/ui/avatar";
+import {Badge} from "@/components/ui/badge";
+import {cn} from "@/lib/utils";
+import {Tooltip, TooltipContent, TooltipProvider, TooltipTrigger,} from "@/components/ui/tooltip";
 
 // Import IUtilisateur and UtilisateurRole from your types
-import {
-  IUtilisateur,
-  UtilisateurRole,
-  UtilisateurStatus,
-} from "../../types/utilisateur.type";
-import { getUtilisateurRole } from "../../utils/getUtilisateurRole";
+import {IUtilisateur, UtilisateurRole, UtilisateurStatus,} from "../../types/utilisateur.type";
+import {getUtilisateurRole} from "../../utils/getUtilisateurRole";
 
 // Adjust DataProps to be IUtilisateur directly
 export type DataProps = IUtilisateur;

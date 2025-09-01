@@ -1,22 +1,13 @@
 "use client";
-import { Input } from "@/components/ui/input";
-import {
-  UtilisateurRole,
-  UtilisateurStatus,
-} from "../../types/utilisateur.type";
+import {Input} from "@/components/ui/input";
+import {UtilisateurRole, UtilisateurStatus,} from "../../types/utilisateur.type";
 
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { useUtilisateurListTable } from "../../hooks/useUtilisateurListTable";
-import { getEnumValues } from "@/utils/getEnumValues";
-import { getUtilisateurRole } from "../../utils/getUtilisateurRole";
-import { getUtilisateurStatus } from "../../utils/getUtilisateurStatus";
-import { Button } from "@/components/ui/button";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from "@/components/ui/select";
+import {useUtilisateurListTable} from "../../hooks/useUtilisateurListTable";
+import {getEnumValues} from "@/utils/getEnumValues";
+import {getUtilisateurRole} from "../../utils/getUtilisateurRole";
+import {getUtilisateurStatus} from "../../utils/getUtilisateurStatus";
+import {Button} from "@/components/ui/button";
 
 export function TableOptions({
   handleTextFilterChange,

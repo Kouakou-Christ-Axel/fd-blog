@@ -1,21 +1,24 @@
 "use client";
 
+import {useMutation,} from '@tanstack/react-query';
 import {
-    useMutation,
-} from '@tanstack/react-query';
-import {
-    ajouterUtilisateurAction,
-    modifierProfilAction,
-    modifierRoleAction,
-    activerUtilisateurAction,
-    desactiverUtilisateurAction,
-    supprimerUtilisateurAction,
+	activerUtilisateurAction,
+	ajouterUtilisateurAction,
+	desactiverUtilisateurAction,
+	modifierProfilAction,
+	modifierRoleAction,
+	supprimerUtilisateurAction,
 } from '../actions/utilisateur.action';
-import { useInvalidateUtilisateurQuery } from './index.query';
-import { UtilisateurAddDTO, UtilisateurRoleDTO, UtilisateurUpdateDTO } from '../schema/utilisateur.schema';
-import { toast } from "sonner";
-import { processAndValidateFormData } from "ak-zod-form-kit";
-import { UtilisateurAddSchema, UtilisateurUpdateSchema } from "../schema/utilisateur.schema";
+import {useInvalidateUtilisateurQuery} from './index.query';
+import {
+	UtilisateurAddDTO,
+	UtilisateurAddSchema,
+	UtilisateurRoleDTO,
+	UtilisateurUpdateDTO,
+	UtilisateurUpdateSchema
+} from '../schema/utilisateur.schema';
+import {toast} from "sonner";
+import {processAndValidateFormData} from "ak-zod-form-kit";
 
 export const useAjouterUtilisateurMutation = () => {
     const invalidateUtilisateurQuery = useInvalidateUtilisateurQuery()

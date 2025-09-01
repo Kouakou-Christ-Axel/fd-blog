@@ -1,12 +1,10 @@
 import React from 'react';
 
-import {
-    useQuery,
-} from '@tanstack/react-query';
+import {useQuery,} from '@tanstack/react-query';
 import getQueryClient from '@/lib/get-query-client';
-import { obtenirStatsUtilisateursAction } from '../actions/utilisateur.action';
-import { utilisateurKeyQuery } from './index.query';
-import { toast } from 'sonner';
+import {obtenirStatsUtilisateursAction} from '../actions/utilisateur.action';
+import {utilisateurKeyQuery} from './index.query';
+import {toast} from 'sonner';
 
 const queryClient = getQueryClient();
 

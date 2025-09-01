@@ -1,11 +1,10 @@
 "use client";
 import React from 'react';
 import NewsCard from "@/components/news/news-card";
-import {useArticleListQuery} from "@/features/articles/queries/article-list.query";
 import SkeletonArticleHorizontal from "@/features/articles/components/skeleton-article-horizontal";
 import {useArticleStore} from "@/features/articles/stores/article.store";
 
-function SimilarArticle({articleId}: { articleId?: string }) {
+function SimilarArticle() {
 	const {getFilteredArticles, isLoading, isFetching, isError,error, allArticles} = useArticleStore();
 
 	const showLoading = isLoading || isFetching;

@@ -1,17 +1,17 @@
-import { useState, useMemo, useCallback } from "react";
+import {useCallback, useMemo, useState} from "react";
 import {
-    SortingState,
-    VisibilityState,
-    useReactTable,
-    getCoreRowModel,
-    getSortedRowModel,
-    ColumnDef,
+	ColumnDef,
+	getCoreRowModel,
+	getSortedRowModel,
+	SortingState,
+	useReactTable,
+	VisibilityState,
 } from "@tanstack/react-table";
-import { useQueryStates } from 'nuqs';
-import { utilisateurFiltersClient } from '../filters/utilisateur.filters';
-import { useUtilisateursListQuery } from "../queries/utilisateur-list.query";
-import { DataProps } from '../components/utilisateur-list/column';
-import { IUtilisateur, IUtilisateursParams, UtilisateurType } from "../types/utilisateur.type";
+import {useQueryStates} from 'nuqs';
+import {utilisateurFiltersClient} from '../filters/utilisateur.filters';
+import {useUtilisateursListQuery} from "../queries/utilisateur-list.query";
+import {DataProps} from '../components/utilisateur-list/column';
+import {IUtilisateur, IUtilisateursParams, UtilisateurType} from "../types/utilisateur.type";
 
 export interface IUtilisateurListTableProps {
     columns: ColumnDef<IUtilisateur>[];

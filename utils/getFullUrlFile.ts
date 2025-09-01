@@ -1,4 +1,4 @@
-import { baseURL } from "@/config";
+import {baseURL} from "@/config";
 
 /**
  * Ajoute une URL de base à un lien.

@@ -4,7 +4,6 @@ import SectionTitle from "@/components/section-title";
 import {Link} from "@/i18n/navigation";
 // import {newsList} from "@/app/api/news";
 import NewsCard from "@/components/news/news-card";
-import {useArticleListQuery} from "@/features/articles/queries/article-list.query";
 import {useArticleStore} from "@/features/articles/stores/article.store";
 import LoadingIndicator from "@/components/loading-indicator";
 

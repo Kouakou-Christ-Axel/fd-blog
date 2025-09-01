@@ -1,4 +1,4 @@
-import { useQueryClient } from '@tanstack/react-query';
+import {useQueryClient} from '@tanstack/react-query';
 
 // 1- Clé de cache
 export const utilisateurKeyQuery = (...params: any[]) => {

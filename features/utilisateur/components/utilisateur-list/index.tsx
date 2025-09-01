@@ -1,24 +1,17 @@
 "use client";
 
-import { flexRender } from "@tanstack/react-table";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
+import {flexRender} from "@tanstack/react-table";
+import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow,} from "@/components/ui/table";
 import TablePagination from "./table-pagination";
-import { getColumns } from "./column";
-import { useUtilisateurListTable } from "../../hooks/useUtilisateurListTable";
-import { TableOptions } from "./table-options";
-import { Loader2 } from "lucide-react";
-import { TableIndicatorFetching } from "./table-indicator-fetching";
-import { UtilisateurUpdateModal } from "../utilisateur-modal/utilisateur-update-modal";
-import { UtilisateurAddModal } from "../utilisateur-modal/utilisateur-add-modal";
-import { UtilisateurDeleteModal } from "../utilisateur-modal/utilisateur-delete-modal";
-import { UtilisateurLockUnlockModal } from "../utilisateur-modal/utilisateur-lock-unlock-modal";
+import {getColumns} from "./column";
+import {useUtilisateurListTable} from "../../hooks/useUtilisateurListTable";
+import {TableOptions} from "./table-options";
+import {Loader2} from "lucide-react";
+import {TableIndicatorFetching} from "./table-indicator-fetching";
+import {UtilisateurUpdateModal} from "../utilisateur-modal/utilisateur-update-modal";
+import {UtilisateurAddModal} from "../utilisateur-modal/utilisateur-add-modal";
+import {UtilisateurDeleteModal} from "../utilisateur-modal/utilisateur-delete-modal";
+import {UtilisateurLockUnlockModal} from "../utilisateur-modal/utilisateur-lock-unlock-modal";
 
 export function UtilisateurList({ type }: { type: "personnel" | "demandeur" }) {
   const columns = getColumns({ type });

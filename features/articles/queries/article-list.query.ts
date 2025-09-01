@@ -1,12 +1,10 @@
 import React from 'react';
 
-import {
-	useQuery,
-} from '@tanstack/react-query';
+import {useQuery,} from '@tanstack/react-query';
 import getQueryClient from "@/lib/get-query-client";
 import {IArticleParams} from "@/features/articles/types/article.type";
 import {articlesKeyQuery} from "@/features/articles/queries/index.query";
-import { obtenirTousArticlesAction } from '../actions/article.action';
+import {obtenirTousArticlesAction} from '../actions/article.action';
 
 const queryClient = getQueryClient();
 

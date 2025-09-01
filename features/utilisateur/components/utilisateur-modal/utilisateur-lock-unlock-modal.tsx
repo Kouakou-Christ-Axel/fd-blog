@@ -1,20 +1,17 @@
 "use client";
 
-import { useCallback } from "react";
+import {useCallback} from "react";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogFooter,
+	DialogHeader,
+	DialogTitle,
 } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { IUtilisateur } from "../../types/utilisateur.type";
-import {
-  useActiverUtilisateurMutation,
-  useDesactiverUtilisateurMutation,
-} from "../../queries/utilisateur.mutation";
+import {Button} from "@/components/ui/button";
+import {IUtilisateur} from "../../types/utilisateur.type";
+import {useActiverUtilisateurMutation, useDesactiverUtilisateurMutation,} from "../../queries/utilisateur.mutation";
 
 type Props = {
   isOpen: boolean;

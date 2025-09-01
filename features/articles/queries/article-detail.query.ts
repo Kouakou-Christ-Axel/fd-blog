@@ -1,12 +1,10 @@
 import React from 'react';
 
-import {
-	useQuery,
-} from '@tanstack/react-query';
+import {useQuery,} from '@tanstack/react-query';
 import getQueryClient from '@/lib/get-query-client';
-import { obtenirUnArticleAction } from '../actions/article.action';
-import { articlesKeyQuery } from './index.query';
-import { toast } from 'sonner';
+import {obtenirUnArticleAction} from '../actions/article.action';
+import {articlesKeyQuery} from './index.query';
+import {toast} from 'sonner';
 
 const queryClient = getQueryClient();
 

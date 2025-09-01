@@ -1,32 +1,23 @@
 "use client";
 
-import { useEffect, useCallback, useMemo } from "react";
+import {useCallback, useEffect, useMemo} from "react";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogFooter,
+	DialogHeader,
+	DialogTitle,
 } from "@/components/ui/dialog";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  UtilisateurRoleSchema,
-  UtilisateurRoleDTO,
-} from "../../schema/utilisateur.schema";
-import { IUtilisateur, UtilisateurRole } from "../../types/utilisateur.type";
-import { getEnumValues } from "@/utils/getEnumValues";
-import { Button } from "@/components/ui/button";
-import { useModifierRoleMutation } from "../../queries/utilisateur.mutation";
-import { getUtilisateurRole } from "../../utils/getUtilisateurRole";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from "@/components/ui/select";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {UtilisateurRoleDTO, UtilisateurRoleSchema,} from "../../schema/utilisateur.schema";
+import {IUtilisateur, UtilisateurRole} from "../../types/utilisateur.type";
+import {getEnumValues} from "@/utils/getEnumValues";
+import {Button} from "@/components/ui/button";
+import {useModifierRoleMutation} from "../../queries/utilisateur.mutation";
+import {getUtilisateurRole} from "../../utils/getUtilisateurRole";
 
 type Props = {
   isOpen: boolean;

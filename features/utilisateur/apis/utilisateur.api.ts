@@ -1,10 +1,14 @@
-import { api } from "@/lib/api";
-import { IUtilisateur } from "../types/utilisateur.type";
-import { IUtilisateurStatsResponse, IUtilisateurAddUpdateResponse, IUtilisateurActiveDesactiveDeleteResponse } from "../types/utilisateur.type";
-import { PaginatedResponse } from "@/types";
-import { SearchParams } from "ak-api-http";
-import { UtilisateurAddDTO, UtilisateurUpdateDTO, UtilisateurRoleDTO } from "../schema/utilisateur.schema";
-import { IUtilisateursParams } from "../types/utilisateur.type";
+import {api} from "@/lib/api";
+import {
+	IUtilisateur,
+	IUtilisateurActiveDesactiveDeleteResponse,
+	IUtilisateurAddUpdateResponse,
+	IUtilisateursParams,
+	IUtilisateurStatsResponse
+} from "../types/utilisateur.type";
+import {PaginatedResponse} from "@/types";
+import {SearchParams} from "ak-api-http";
+import {UtilisateurAddDTO, UtilisateurRoleDTO, UtilisateurUpdateDTO} from "../schema/utilisateur.schema";
 
 export interface IUtilisateurAPI {
     obtenirTousUtilisateurs(params: IUtilisateursParams): Promise<PaginatedResponse<IUtilisateur>>;

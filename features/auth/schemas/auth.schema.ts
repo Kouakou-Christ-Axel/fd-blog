@@ -1,4 +1,4 @@
-import { z } from "zod";
+import {z} from "zod";
 
 export const loginSchema = z.object({
   email: z.string({ message: "Email requis" }).email({ message: "Adresse email invalide" }),

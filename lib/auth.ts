@@ -1,7 +1,7 @@
 import NextAuth from "next-auth";
 import CredentialsProvider from "next-auth/providers/credentials";
-import { authAPI } from "@/features/auth/apis/auth.api";
-import { JWT } from "next-auth/jwt";
+import {authAPI} from "@/features/auth/apis/auth.api";
+import {JWT} from "next-auth/jwt";
 
 export const { handlers, auth, signIn, signOut } = NextAuth({
   session: {

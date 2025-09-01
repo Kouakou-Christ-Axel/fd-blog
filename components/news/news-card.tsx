@@ -1,7 +1,5 @@
 import React from 'react';
 import Image from "next/image";
-import {INews} from "@/app/api/news";
-import {Badge} from "@/components/ui/badge";
 import ArticleCard, {IMedia, MediaCardProps} from "@/components/media/article-card";
 import CategoryBadge from "@/components/category-badge";
 import {IArticle} from "@/features/articles/types/article.type";

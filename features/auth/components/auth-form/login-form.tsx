@@ -1,20 +1,20 @@
 "use client";
-import React, { useTransition, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Link } from "@/i18n/navigation";
-import { Icon } from "@/components/ui/icon";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { cn } from "@/lib/utils";
-import { Loader2 } from "lucide-react";
-import { toast } from "sonner";
-import { useRouter } from "next/navigation";
-import { useTranslations } from "next-intl";
-import { LoginDTO, loginSchema } from "../../schemas/auth.schema";
-import { login } from "../../actions/auth.action";
+import React, {useState, useTransition} from "react";
+import {Button} from "@/components/ui/button";
+import {Checkbox} from "@/components/ui/checkbox";
+import {Input} from "@/components/ui/input";
+import {Label} from "@/components/ui/label";
+import {Link} from "@/i18n/navigation";
+import {Icon} from "@/components/ui/icon";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {cn} from "@/lib/utils";
+import {Loader2} from "lucide-react";
+import {toast} from "sonner";
+import {useRouter} from "next/navigation";
+import {useTranslations} from "next-intl";
+import {LoginDTO, loginSchema} from "../../schemas/auth.schema";
+import {login} from "../../actions/auth.action";
 
 const LoginForm = () => {
   const t = useTranslations("LoginForm");

@@ -1,9 +1,6 @@
 "use client";
 import React from 'react';
 import NewsCard from "@/components/news/news-card";
-import {useArticleListQuery} from "@/features/articles/queries/article-list.query";
-import Loading from "@/app/[locale]/(protected)/app/projects/loading";
-import LoadingIndicator from "@/components/loading-indicator";
 import SkeletonVedette from "@/features/articles/components/actualite-nationale/skeleton-vedette";
 import {useArticleStore} from "@/features/articles/stores/article.store";
 

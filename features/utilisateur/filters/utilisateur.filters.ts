@@ -1,7 +1,6 @@
-
-import { parseAsString, parseAsInteger, parseAsStringEnum } from 'nuqs';
-import { UtilisateurRole, UtilisateurStatus, UtilisateurType } from '@/features/utilisateur/types/utilisateur.type';
-import { getEnumValues } from '@/utils/getEnumValues';
+import {parseAsInteger, parseAsString, parseAsStringEnum} from 'nuqs';
+import {UtilisateurRole, UtilisateurStatus, UtilisateurType} from '@/features/utilisateur/types/utilisateur.type';
+import {getEnumValues} from '@/utils/getEnumValues';
 
 /**
  * @constant utilisateurFiltersClient

@@ -1,4 +1,4 @@
-import {parseAsString, parseAsStringEnum, parseAsBoolean, parseAsInteger} from 'nuqs';
+import {parseAsInteger, parseAsString, parseAsStringEnum} from 'nuqs';
 import {ArticleType} from '@/features/articles/types/article.type';
 import {getEnumValues} from '@/utils/getEnumValues';
 

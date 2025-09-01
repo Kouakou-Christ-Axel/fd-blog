@@ -1,33 +1,24 @@
 "use client";
 
-import { useCallback, useMemo } from "react";
+import {useCallback, useMemo} from "react";
 import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogFooter,
-  DialogHeader,
-  DialogTitle,
+	Dialog,
+	DialogContent,
+	DialogDescription,
+	DialogFooter,
+	DialogHeader,
+	DialogTitle,
 } from "@/components/ui/dialog";
-import { Input } from "@/components/ui/input";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import {
-  UtilisateurAddDTO,
-  UtilisateurAddSchema,
-} from "../../schema/utilisateur.schema";
-import { UtilisateurRole } from "../../types/utilisateur.type";
-import { getEnumValues } from "@/utils/getEnumValues";
-import { Button } from "@/components/ui/button"; // Assurez-vous que le chemin est correct pour Shadcn Button
-import { getUtilisateurRole } from "../../utils/getUtilisateurRole";
-import { useAjouterUtilisateurMutation } from "../../queries/utilisateur.mutation";
+import {Input} from "@/components/ui/input";
+import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue,} from "@/components/ui/select";
+import {useForm} from "react-hook-form";
+import {zodResolver} from "@hookform/resolvers/zod";
+import {UtilisateurAddDTO, UtilisateurAddSchema,} from "../../schema/utilisateur.schema";
+import {UtilisateurRole} from "../../types/utilisateur.type";
+import {getEnumValues} from "@/utils/getEnumValues";
+import {Button} from "@/components/ui/button"; // Assurez-vous que le chemin est correct pour Shadcn Button
+import {getUtilisateurRole} from "../../utils/getUtilisateurRole";
+import {useAjouterUtilisateurMutation} from "../../queries/utilisateur.mutation";
 
 type Props = {
   isOpen: boolean;

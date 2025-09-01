@@ -1,15 +1,12 @@
 import React from 'react';
 
-import {
-    useInfiniteQuery,
-} from '@tanstack/react-query';
-import { IUtilisateur } from '../types/utilisateur.type';
-import { PaginatedResponse } from '@/types';
+import {useInfiniteQuery,} from '@tanstack/react-query';
+import {IUtilisateur, IUtilisateursParams} from '../types/utilisateur.type';
+import {PaginatedResponse} from '@/types';
 import getQueryClient from '@/lib/get-query-client';
-import { obtenirTousUtilisateursAction } from '../actions/utilisateur.action';
-import { IUtilisateursParams } from '../types/utilisateur.type';
-import { utilisateurKeyQuery } from './index.query';
-import { toast } from 'sonner';
+import {obtenirTousUtilisateursAction} from '../actions/utilisateur.action';
+import {utilisateurKeyQuery} from './index.query';
+import {toast} from 'sonner';
 
 const queryClient = getQueryClient();
 

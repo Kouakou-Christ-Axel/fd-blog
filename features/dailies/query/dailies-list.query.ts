@@ -1,8 +1,6 @@
 import React from 'react';
 
-import {
-	useQuery,
-} from '@tanstack/react-query';
+import {useQuery,} from '@tanstack/react-query';
 import getQueryClient from "@/lib/get-query-client";
 import {dailiesKeyQuery} from "@/features/dailies/query/index.query";
 import {obtenirTousDailiesAction} from "@/features/dailies/dailies.action";

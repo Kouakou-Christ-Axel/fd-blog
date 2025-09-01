@@ -1,4 +1,4 @@
-import { UtilisateurRole } from "../types/utilisateur.type";
+import {UtilisateurRole} from "../types/utilisateur.type";
 
 
 export function getUtilisateurRole(role: UtilisateurRole) {

@@ -2,8 +2,9 @@
 import * as React from "react";
 import Cleave from "cleave.js/react";
 import "cleave.js/dist/addons/cleave-phone.us";
-import { cn } from "@/lib/utils";
-import { CleaveOptions } from "cleave.js/options";
+import {cn} from "@/lib/utils";
+import {CleaveOptions} from "cleave.js/options";
+
 interface CleaveInputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   options: CleaveOptions;
 }

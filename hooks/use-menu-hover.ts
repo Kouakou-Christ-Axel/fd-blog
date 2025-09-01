@@ -1,5 +1,4 @@
-
-import { atom, useAtom } from "jotai";
+import {atom, useAtom} from "jotai";
 
 export type hoverConfig = {
   hovered: boolean;

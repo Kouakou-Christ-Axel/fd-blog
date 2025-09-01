@@ -1,10 +1,7 @@
 import React from 'react';
 import PageTitle from "@/components/blocks/page-title";
 import SectionTitle from "@/components/section-title";
-import VideoCard from "@/components/media/video-card";
-import {videosList} from "@/app/api/videos";
 import Publicite from "@/components/publicite";
-import Image from "next/image";
 import ComingSoon from "@/components/coming-soon";
 
 function VideosPage() {

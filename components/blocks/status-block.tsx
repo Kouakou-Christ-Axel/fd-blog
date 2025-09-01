@@ -1,15 +1,10 @@
 "use client";
 
 import dynamic from "next/dynamic";
-import { cn } from "@/lib/utils";
-import { Card, CardContent } from "@/components/ui/card";
-import { useTheme } from "next-themes";
-import {
-  formatSeriesForChart,
-  generateChartOptions,
-  type SeriesData,
-  type PeriodType,
-} from "@/utils/chart.utils";
+import {cn} from "@/lib/utils";
+import {Card, CardContent} from "@/components/ui/card";
+import {useTheme} from "next-themes";
+import {formatSeriesForChart, generateChartOptions, type PeriodType, type SeriesData,} from "@/utils/chart.utils";
 
 const Chart = dynamic(() => import("react-apexcharts"), { ssr: false });
 

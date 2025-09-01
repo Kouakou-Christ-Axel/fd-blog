@@ -1,24 +1,24 @@
-import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import type {Metadata} from "next";
+import {Inter} from "next/font/google";
 import "./globals.css";
 import "./theme.css";
-import { ThemeProvider } from "@/providers/theme-provider";
+import {ThemeProvider} from "@/providers/theme-provider";
 import MountedProvider from "@/providers/mounted.provider";
-import { Toaster } from "@/components/ui/sonner";
-const inter = Inter({ subsets: ["latin"] });
-
+import {Toaster} from "@/components/ui/sonner";
 // language
-import { getLangDir } from "rtl-detect";
-import { NextIntlClientProvider } from "next-intl";
-import { getMessages } from "next-intl/server";
+import {getLangDir} from "rtl-detect";
+import {NextIntlClientProvider} from "next-intl";
+import {getMessages} from "next-intl/server";
 import DirectionProvider from "@/providers/direction-provider";
 import AuthProvider from "@/providers/auth.provider";
 import QueryProvider from "@/providers/query-provider";
-import { NuqsAdapter } from "nuqs/adapters/next/app";
-import { dehydrate, HydrationBoundary } from "@tanstack/react-query";
+import {NuqsAdapter} from "nuqs/adapters/next/app";
+import {dehydrate, HydrationBoundary} from "@tanstack/react-query";
 import getQueryClient from "@/lib/get-query-client";
-import { siteConfig } from "@/config/site";
+import {siteConfig} from "@/config/site";
 import DataProvider from "@/providers/data.provider";
+
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: siteConfig.name,

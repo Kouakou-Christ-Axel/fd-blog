@@ -1,10 +1,15 @@
 "use server";
 
-import { ActionResponse, PaginatedResponse } from "@/types";
-import { utilisateurAPI } from "../apis/utilisateur.api";
-import { UtilisateurAddDTO, UtilisateurRoleDTO, UtilisateurUpdateDTO } from "../schema/utilisateur.schema";
-import { IUtilisateur, IUtilisateurActiveDesactiveDeleteResponse, IUtilisateursParams, IUtilisateurStatsResponse } from "../types/utilisateur.type";
-import { handleServerActionError } from "@/utils/handleServerActionError";
+import {ActionResponse, PaginatedResponse} from "@/types";
+import {utilisateurAPI} from "../apis/utilisateur.api";
+import {UtilisateurAddDTO, UtilisateurRoleDTO, UtilisateurUpdateDTO} from "../schema/utilisateur.schema";
+import {
+	IUtilisateur,
+	IUtilisateurActiveDesactiveDeleteResponse,
+	IUtilisateursParams,
+	IUtilisateurStatsResponse
+} from "../types/utilisateur.type";
+import {handleServerActionError} from "@/utils/handleServerActionError";
 
 export const obtenirTousUtilisateursAction = async (params: IUtilisateursParams): Promise<ActionResponse<PaginatedResponse<IUtilisateur>>> => {
     try {

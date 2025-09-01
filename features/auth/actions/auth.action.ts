@@ -1,14 +1,14 @@
 "use server";
 
-import { auth, signIn, signOut } from "@/lib/auth";
-import { redirect } from "next/navigation";
-import { LoginDTO, loginSchema } from "../schemas/auth.schema";
-import { processAndValidateFormData } from "ak-zod-form-kit";
-import { authAPI } from "../apis/auth.api";
-import { headers } from "next/headers";
-import { getToken, JWT } from "next-auth/jwt";
-import { ActionResponse } from "@/types";
-import { handleServerActionError } from "@/utils/handleServerActionError";
+import {auth, signIn, signOut} from "@/lib/auth";
+import {redirect} from "next/navigation";
+import {LoginDTO, loginSchema} from "../schemas/auth.schema";
+import {processAndValidateFormData} from "ak-zod-form-kit";
+import {authAPI} from "../apis/auth.api";
+import {headers} from "next/headers";
+import {getToken, JWT} from "next-auth/jwt";
+import {ActionResponse} from "@/types";
+import {handleServerActionError} from "@/utils/handleServerActionError";
 
 export async function login(
   formdata: LoginDTO

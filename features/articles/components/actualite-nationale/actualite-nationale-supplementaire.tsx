@@ -3,7 +3,6 @@
 import React from 'react';
 import NewsCard from "@/components/news/news-card";
 import Publicite from "@/components/publicite";
-import {useArticleListQuery} from "@/features/articles/queries/article-list.query";
 import SkeletonArticleHorizontal from "@/features/articles/components/skeleton-article-horizontal";
 import {useArticleStore} from "@/features/articles/stores/article.store";
 

@@ -1,5 +1,5 @@
 "use client";
-import { AlertTriangle, RefreshCw, Home, ArrowLeft } from "lucide-react";
+import {AlertTriangle, ArrowLeft, Home, RefreshCw} from "lucide-react";
 
 interface ErrorPageProps {
   error?: Error & { digest?: string };

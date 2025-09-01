@@ -1,5 +1,5 @@
-import { useAtom } from "jotai"
-import { atomWithStorage } from "jotai/utils"
+import {useAtom} from "jotai"
+import {atomWithStorage} from "jotai/utils"
 
 export type TodoConfig = {
   isOpen: boolean

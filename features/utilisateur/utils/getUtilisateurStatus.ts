@@ -1,4 +1,4 @@
-import { UtilisateurStatus } from "../types/utilisateur.type";
+import {UtilisateurStatus} from "../types/utilisateur.type";
 
 
 export function getUtilisateurStatus(status: UtilisateurStatus) {

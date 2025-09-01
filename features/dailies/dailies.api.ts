@@ -1,4 +1,3 @@
-
 import {PaginatedResponse} from "@/types";
 import {IDaily} from "@/features/dailies/types";
 import {api} from "@/lib/api";

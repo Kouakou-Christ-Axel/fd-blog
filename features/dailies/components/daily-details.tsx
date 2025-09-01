@@ -23,22 +23,22 @@ function DailyDetails({dailyId}: { dailyId: string }) {
 
 	// Filtrage par date si une date est sélectionnée
 	const daily = getDailyById(dailyId);
-
-	const [selectedDate, setSelectedDate] = React.useState<string | null>(new Date(daily?.published_at).toISOString().split('T')[0]);
-
-	// Affichage de l'indicateur de chargement si les données sont en cours de chargement
-
-	if (isLoading || isFetching) {
-		return <LoadingIndicator/>;
-	}
-
-
+	const [selectedDate, setSelectedDate] = React.useState<string | null>(null);
 
 	if (!daily) {
 		return <div className="mb-10">
 			<p className="text-center text-gray-500">Aucun daily disponible.</p>
 		</div>;
 	}
+
+	setSelectedDate(new Date(daily.published_at).toISOString().split('T')[0])
+
+
+	// Affichage de l'indicateur de chargement si les données sont en cours de chargement
+	if (isLoading || isFetching) {
+		return <LoadingIndicator/>;
+	}
+
 	return (
 		<article>
 			<SectionTitle text="A Barthelemy Zouzoua Inabo" className="my-6"/>
@@ -57,13 +57,13 @@ function DailyDetails({dailyId}: { dailyId: string }) {
 					/>
 				</div>
 				<div className="prose flex-1 space-y-8">
-					{daily.contents.map((content:IDailyContent, index: number) => {
+					{daily.contents.map((content: IDailyContent, index: number) => {
 						return (
 							<div className="text-justify" key={index}>
 								<Badge className={cn("mb-3 text-base", colors[index % colors.length])}>
 									{content.hashtag.hashtag}
 								</Badge>
-								<div dangerouslySetInnerHTML={{__html:content.body}}></div>
+								<div dangerouslySetInnerHTML={{__html: content.body}}></div>
 							</div>
 						)
 					})}

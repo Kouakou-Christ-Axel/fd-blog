@@ -1,18 +1,18 @@
 'use client';
 
 import {
-  MediaControlBar,
-  MediaController,
-  MediaMuteButton,
-  MediaPlayButton,
-  MediaSeekBackwardButton,
-  MediaSeekForwardButton,
-  MediaTimeDisplay,
-  MediaTimeRange,
-  MediaVolumeRange,
+	MediaControlBar,
+	MediaController,
+	MediaMuteButton,
+	MediaPlayButton,
+	MediaSeekBackwardButton,
+	MediaSeekForwardButton,
+	MediaTimeDisplay,
+	MediaTimeRange,
+	MediaVolumeRange,
 } from 'media-chrome/react';
-import type { ComponentProps, CSSProperties } from 'react';
-import { cn } from '@/lib/utils';
+import type {ComponentProps, CSSProperties} from 'react';
+import {cn} from '@/lib/utils';
 
 export type VideoPlayerProps = ComponentProps<typeof MediaController>;
 

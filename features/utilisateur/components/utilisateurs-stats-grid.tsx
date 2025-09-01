@@ -1,9 +1,9 @@
 "use client";
 
-import { StatusBlock } from "@/components/blocks/status-block";
-import { User, CheckCircle, PauseCircle, Ban } from "lucide-react";
-import { useTranslations } from "next-intl";
-import { useUtilisateurStatsQuery } from "@/features/utilisateur/queries/utilisateur-stats.query";
+import {StatusBlock} from "@/components/blocks/status-block";
+import {Ban, CheckCircle, PauseCircle, User} from "lucide-react";
+import {useTranslations} from "next-intl";
+import {useUtilisateurStatsQuery} from "@/features/utilisateur/queries/utilisateur-stats.query";
 
 export function UtilisateursStatsGrid({
   type,

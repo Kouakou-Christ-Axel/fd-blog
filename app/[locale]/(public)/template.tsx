@@ -1,7 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
-import { usePathname } from "@/i18n/navigation";
+import {motion} from "framer-motion";
+import {usePathname} from "@/i18n/navigation";
 
 export default function Template({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();

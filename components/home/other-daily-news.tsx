@@ -4,7 +4,6 @@ import React from 'react';
 import SectionTitle from "@/components/section-title";
 import {Link} from "@/i18n/navigation";
 import NewsCard from "@/components/news/news-card";
-import {useArticleListQuery} from "@/features/articles/queries/article-list.query";
 import SkeletonCard from "@/components/media/skeleton-card";
 import {useArticleStore} from "@/features/articles/stores/article.store";
 

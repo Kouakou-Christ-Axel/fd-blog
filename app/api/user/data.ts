@@ -1,4 +1,5 @@
 import avatar3 from "@/public/images/avatar/avatar-3.png";
+
 export const user = [
   {
     id: 1,

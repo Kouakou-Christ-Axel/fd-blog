@@ -1,4 +1,4 @@
-import type { ApexOptions } from 'apexcharts';
+import type {ApexOptions} from 'apexcharts';
 
 export interface SeriesData {
     date: string;

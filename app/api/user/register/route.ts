@@ -1,6 +1,7 @@
-import { NextResponse, NextRequest } from "next/server";
-import { user } from "../data";
+import {NextRequest, NextResponse} from "next/server";
+import {user} from "../data";
 import avatar3 from "@/public/images/avatar/avatar-3.png";
+
 export async function POST(request: NextRequest, response: any) {
   try {
     let reqBody = await request.json();

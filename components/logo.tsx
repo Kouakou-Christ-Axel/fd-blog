@@ -1,12 +1,11 @@
 'use client'
 import React from "react";
 import LogoFdPrime from "./logo-fd-prime";
-import { Link } from '@/i18n/navigation';
-import { useConfig } from "@/hooks/use-config";
-import { useMenuHoverConfig } from "@/hooks/use-menu-hover";
-import { useMediaQuery } from "@/hooks/use-media-query";
-import { siteConfig } from "@/config/site";
-
+import {Link} from '@/i18n/navigation';
+import {useConfig} from "@/hooks/use-config";
+import {useMenuHoverConfig} from "@/hooks/use-menu-hover";
+import {useMediaQuery} from "@/hooks/use-media-query";
+import {siteConfig} from "@/config/site";
 
 
 const Logo = () => {

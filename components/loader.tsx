@@ -1,10 +1,10 @@
-
 'use client'
 import React from "react";
-import { Loader2 } from "lucide-react";
+import {Loader2} from "lucide-react";
 import LogoFdPrime from "./logo-fd-prime";
-import { useMounted } from "@/hooks/use-mounted";
-import { siteConfig } from "@/config/site";
+import {useMounted} from "@/hooks/use-mounted";
+import {siteConfig} from "@/config/site";
+
 const Loader = () => {
     const mounted = useMounted()
     return (
